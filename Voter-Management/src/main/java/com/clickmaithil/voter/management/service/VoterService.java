@@ -1,8 +1,8 @@
-package com.example.Voter.Management.service;
+package com.clickmaithil.voter.management.service;
 
-import com.example.Voter.Management.common.GenericResponse;
-import com.example.Voter.Management.entity.Voter;
-import com.example.Voter.Management.repo.VoterRepo;
+import com.clickmaithil.voter.management.common.GenericResponse;
+import com.clickmaithil.voter.management.entity.Voter;
+import com.clickmaithil.voter.management.repo.VoterRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +15,8 @@ public class VoterService {
     @Autowired
     VoterRepo voterRepo;
 
-    public Voter addNewVoter(Voter voter){
-
-      return  voterRepo.save(voter);
+    public GenericResponse addNewVoter(Voter voter){
+      return  new GenericResponse("Voter added successfully",1,voterRepo.save(voter));
     }
 
     public List<Voter> getAllVoter()

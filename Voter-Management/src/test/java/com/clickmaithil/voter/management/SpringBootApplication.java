@@ -1,4 +1,4 @@
-package com.example.Voter.Management;
+package com.clickmaithil.voter.management;
 
 public @interface SpringBootApplication {
 }

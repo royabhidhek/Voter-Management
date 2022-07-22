@@ -1,10 +1,9 @@
-package com.example.Voter.Management.entity;
+package com.clickmaithil.voter.management.entity;
 
 import javax.persistence.*;
 
 @Entity
 public class Voter {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,9 +11,8 @@ public class Voter {
     private String name;
     private String village;
     private String district;
-    private long pincode;
-    private  String state;
-
+    private Long pincode;
+    private String state;
 
     public Long getId() {
         return id;
@@ -23,7 +21,6 @@ public class Voter {
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public String getName() {
         return name;
@@ -49,11 +46,11 @@ public class Voter {
         this.district = district;
     }
 
-    public long getPincode() {
+    public Long getPincode() {
         return pincode;
     }
 
-    public void setPincode(long pincode) {
+    public void setPincode(Long pincode) {
         this.pincode = pincode;
     }
 
@@ -64,6 +61,9 @@ public class Voter {
     public void setState(String state) {
         this.state = state;
     }
+
+
+
 
 
 }

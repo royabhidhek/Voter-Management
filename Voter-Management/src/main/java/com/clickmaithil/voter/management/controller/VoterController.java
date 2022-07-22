@@ -1,10 +1,11 @@
-package com.example.Voter.Management.controller;
+package com.clickmaithil.voter.management.controller;
 
-import com.example.Voter.Management.common.GenericResponse;
-import com.example.Voter.Management.entity.Voter;
+import com.clickmaithil.voter.management.common.GenericResponse;
+import com.clickmaithil.voter.management.entity.Voter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import com.example.Voter.Management.service.VoterService;
+import com.clickmaithil.voter.management.service.VoterService;
 
 import java.util.List;
 
@@ -15,8 +16,8 @@ public class VoterController {
     VoterService voterService;
 
 
-    @PostMapping("/voter")
-    Voter addNewVoter(@RequestBody Voter newVoter) {
+    @PostMapping( "/voter")
+    GenericResponse addNewVoter(@RequestBody Voter newVoter) {
         return voterService.addNewVoter(newVoter);
     }
 
